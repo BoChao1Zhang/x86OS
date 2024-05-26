@@ -30,7 +30,7 @@ static void show_msg(const char* msg){
 static void detect_memory(void){
 
     SMAP_entry_t SMAP_entry;
-    show_msg("try to detect memory");
+    show_msg("try to detect memory......\n\t");
 
     uint32_t contID = 0;
     int signature,bytes;
@@ -67,6 +67,7 @@ static void detect_memory(void){
 
 
 void loader_entry(void){
-    show_msg("....loading.....");
+    detect_memory();
+    show_msg("....loading.....\n\t");
     for(;;){}
 }
